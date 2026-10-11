@@ -1,0 +1,50 @@
+USE RetailDWH;
+GO
+
+IF SCHEMA_ID('dim') IS NULL
+    EXEC('CREATE SCHEMA dim');
+GO
+
+CREATE TABLE dim.DimDate
+(
+    DateKey INT NOT NULL PRIMARY KEY,
+    FullDate DATE NOT NULL UNIQUE,
+    DayNumber INT NOT NULL,
+    MonthNumber INT NOT NULL,
+    MonthName NVARCHAR(20) NOT NULL,
+    QuarterNumber INT NOT NULL,
+    YearNumber INT NOT NULL
+);
+GO
+;WITH DateCTE AS
+(
+    SELECT CAST('2020-01-01' AS DATE) AS FullDate
+
+    UNION ALL
+
+    SELECT DATEADD(DAY, 1, FullDate)
+    FROM DateCTE
+    WHERE FullDate < '2030-12-31'
+)
+
+INSERT INTO dim.DimDate
+(
+    DateKey,
+    FullDate,
+    DayNumber,
+    MonthNumber,
+    MonthName,
+    QuarterNumber,
+    YearNumber
+)
+SELECT
+    CAST(CONVERT(VARCHAR(8), FullDate, 112) AS INT),
+    FullDate,
+    DAY(FullDate),
+    MONTH(FullDate),
+    DATENAME(MONTH, FullDate),
+    DATEPART(QUARTER, FullDate),
+    YEAR(FullDate)
+FROM DateCTE
+OPTION (MAXRECURSION 0);
+GO
