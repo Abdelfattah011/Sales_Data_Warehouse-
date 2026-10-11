@@ -62,9 +62,7 @@ The pipeline follows a multi-tier Medallion architecture combined with modern da
   <img src="2.png" alt="Star" width="100%">
 </p>
 
-<p align="center">
-  <img src="Star Schema.png" alt="Star Schema" width="75%">
-</p>
+
 
 ### **Dimension Tables**
 * **`dim.DimDate`**: Date dimension supporting smart integer keys (`YYYYMMDD`) for partition-friendly time-series analysis.
@@ -97,6 +95,10 @@ The pipeline follows a multi-tier Medallion architecture combined with modern da
 ---
 
 ## 🔄 ETL & Data Transformation Pipeline
+
+<p align="center">
+  <img src="Star Schema.png" alt="Star Schema" width="90%">
+</p>
 
 1. **Source Data Preparation:**
    * Scripted OLTP seed schemas and imported catalog spreadsheets via flat file pipelines.
