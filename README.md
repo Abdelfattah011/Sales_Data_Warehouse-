@@ -25,6 +25,10 @@ The pipeline follows a multi-tier Medallion architecture combined with modern da
 
 ## 🛠️ Data Layers (Medallion Approach)
 
+<p align="center">
+  <img src="Medallian ARC.png" alt="Medallian ARC" width="100%">
+</p>
+
 ### 1. 🥉 Bronze Layer (Raw Ingestion)
 * **Sources:**
   * **Transactional Database (`RetailOLTP`)**: `Customers`, `Stores`, `Orders`, and `OrderLines`.
