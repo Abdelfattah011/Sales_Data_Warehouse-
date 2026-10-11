@@ -3,9 +3,8 @@
 A robust, end-to-end Data Warehouse solution designed to analyze retail sales performance. This project integrates multiple heterogeneous data sources (OLTP relational database and external Excel catalog), transforms raw data across a structured **Medallion Architecture (Bronze / Silver / Gold)**, and models the business layer into an optimized **Star Schema** with **SCD Type 2** historical tracking.
 
 <p align="center">
-  <img src="Medallian ARC.png" alt="Medallian ARC" width="100%">
+  <img src="1.png" alt="Star Schema" width="100%">
 </p>
-
 ---
 
 ## 🏗️ Architecture Overview
@@ -55,9 +54,7 @@ The pipeline follows a multi-tier Medallion architecture combined with modern da
 
 ## ⭐ Dimensional Modeling (Star Schema)
 
-<p align="center">
-  <img src="1.png" alt="Star Schema" width="100%">
-</p>
+
 
 <p align="center">
   <img src="2.png" alt="Star" width="100%">
