@@ -51,6 +51,10 @@ The pipeline follows a multi-tier Medallion architecture combined with modern da
 
 ## ⭐ Dimensional Modeling (Star Schema)
 
+<p align="center">
+  <img src="1.png" alt="Star Schema" width="100%">
+</p>
+
 ### **Dimension Tables**
 * **`dim.DimDate`**: Date dimension supporting smart integer keys (`YYYYMMDD`) for partition-friendly time-series analysis.
 * **`dim.DimCustomer` (SCD Type 1)**:
