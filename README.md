@@ -32,9 +32,7 @@ The pipeline follows a multi-tier Medallion architecture combined with modern da
   <img src="Medallian ARC.png" alt="Medallian ARC" width="100%">
 </p>
 
-<p align="center">
-  <img src="Star Schema.png" alt="Star Schema" width="100%">
-</p>
+
 
 ### 1. 🥉 Bronze Layer (Raw Ingestion)
 * **Sources:**
@@ -62,6 +60,10 @@ The pipeline follows a multi-tier Medallion architecture combined with modern da
 
 <p align="center">
   <img src="2.png" alt="Star" width="100%">
+</p>
+
+<p align="center">
+  <img src="Star Schema.png" alt="Star Schema" width="75%">
 </p>
 
 ### **Dimension Tables**
