@@ -55,6 +55,10 @@ The pipeline follows a multi-tier Medallion architecture combined with modern da
   <img src="1.png" alt="Star Schema" width="100%">
 </p>
 
+<p align="center">
+  <img src="2.png" alt="Star" width="100%">
+</p>
+
 ### **Dimension Tables**
 * **`dim.DimDate`**: Date dimension supporting smart integer keys (`YYYYMMDD`) for partition-friendly time-series analysis.
 * **`dim.DimCustomer` (SCD Type 1)**:
